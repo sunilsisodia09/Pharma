@@ -1,0 +1,54 @@
+.chapter-container {
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9fff9;
+}
+
+.chapter-container h1 {
+  color: #008751;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #00b386;
+}
+
+.topic-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.chapter-btn {
+  background-color: #00b386;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.chapter-btn:hover {
+  background-color: #008751;
+}
+
+.topic-content {
+  background: #ffffff;
+  border: 1px solid #e1e1e1;
+  padding: 20px;
+  border-radius: 10px;
+  line-height: 1.6;
+}
+
+.topic-content h3,
+.topic-content h4 {
+  color: #00794d;
+}
+
+.topic-content ul {
+  margin-left: 20px;
+}
+
+.topic-content p {
+  margin: 10px 0;
+}

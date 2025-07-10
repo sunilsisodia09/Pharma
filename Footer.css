@@ -1,0 +1,105 @@
+/* ========== General Footer Styling ========== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-top {
+  margin-top: 5vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #f5f9fc;
+  border-top: 4px solid #008080;
+  border-bottom: 1px solid #cce7ee;
+}
+
+.footer-section {
+  flex: 1 1 250px;
+  margin: 10px 20px;
+  min-width: 220px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 12px;
+  color: #007a7a;
+  font-size: 18px;
+  font-weight: 600;
+  border-left: 4px solid #00b3b3;
+  padding-left: 8px;
+}
+
+.footer-section p,
+.footer-section li {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.footer-section li a {
+  text-decoration: none;
+  color: #005f73;
+  transition: color 0.3s ease;
+}
+
+.footer-section li a:hover {
+  color: #008080;
+  text-decoration: underline;
+}
+
+/* ========== Bottom Footer ========== */
+.footer-bottom {
+  text-align: center;
+  background-color: #e0f7f7;
+  padding: 12px 10px;
+  font-size: 13px;
+  color: #444;
+  border-top: 1px solid #b2dfdb;
+}
+
+/* ========== Mobile Responsive Styling ========== */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    padding: 10px 10px;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin: 10px 0;
+    min-width: 100%;
+  }
+
+  .footer-section h3,
+  .footer-section h4 {
+    font-size: 16px;
+    text-align: center;
+    padding-left: 0;
+    border-left: none;
+    border-bottom: 2px solid #00b3b3;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+  }
+
+  .footer-section ul {
+    padding-left: 0;
+  }
+
+  .footer-section li {
+    margin: 6px 0;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+    padding: 10px 5px;
+  }
+}

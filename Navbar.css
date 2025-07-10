@@ -1,0 +1,262 @@
+
+
+/* ========== Navbar Base ========== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  /* margin-bottom: 75vh; */
+}
+
+
+
+/* ========== Top Navbar ========== */
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: #fff;
+}
+
+.nav-logo {
+  font-weight: bold;
+  font-size: 24px;
+  color: #008000;
+}
+
+/* ========== Hamburger Icon ========== */
+.hamburger-icon {
+  display: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* ========== Left Navigation ========== */
+.nav-left {
+  display: flex;
+  gap: 20px;
+}
+
+.dropdown-trigger {
+  position: relative;
+  cursor: pointer;
+}
+
+.trigger-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dropdown-icon {
+  transition: transform 0.2s ease;
+}
+
+.dropdown-icon.rotated {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 32px;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  z-index: 10;
+  min-width: 150px;
+}
+
+.dropdown-header {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.dropdown-menu > div {
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.dropdown-menu > div:hover {
+  background-color: #f0f0f0;
+}
+
+.navbar-dark .dropdown-menu {
+  background-color: #2a2a2a;
+  color: #fff;
+  border-color: #444;
+}
+
+.navbar-dark .dropdown-menu > div:hover {
+  background-color: #444;
+}
+
+/* ========== Right Navigation ========== */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon,
+.icon-left,
+.icon-right {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.search-box-1 {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.search-box-1 input {
+  border: none;
+  outline: none;
+  padding: 5px;
+  background: transparent;
+  color: inherit;
+}
+
+.sign-in-btn-1 {
+  padding: 6px 12px;
+  background-color: #008000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.sign-in-btn-1:hover {
+  background-color: #006600;
+}
+
+/* ========== Responsive Styling ========== */
+.desktop-only {
+  display: flex;
+}
+
+/* ---------- Tablets (≤ 1024px) ---------- */
+@media (max-width: 1024px) {
+  .top-navbar {
+    padding: 10px 16px;
+  }
+
+  .nav-left {
+    gap: 15px;
+  }
+
+  .nav-right {
+    gap: 12px;
+  }
+
+  .nav-logo {
+    font-size: 20px;
+  }
+}
+
+/* ---------- Mobile (≤ 768px) ---------- */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+
+  .hamburger-icon {
+    display: block;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 260px;
+    height: 100%;
+    background-color: #fff;
+    color: #333;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    z-index: 1000;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .sidebar.show {
+    left: 0;
+  }
+
+  .navbar-dark .sidebar {
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+  }
+
+  .sidebar .nav-left,
+  .sidebar .nav-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .sidebar .dropdown-trigger {
+    width: 100%;
+    text-align: center;
+  }
+
+  .sidebar .dropdown-menu {
+    position: static;
+    background-color: inherit;
+    border: none;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .sidebar .dropdown-menu > div {
+    padding: 5px 0;
+  }
+
+  .sidebar .search-box-1 {
+    width: 100%;
+  }
+
+  .sidebar .sign-in-btn-1 {
+    width: 100%;
+  }
+
+  /* Sidebar backdrop */
+  .sidebar-backdrop {
+    position: fixed;
+    top: 2vh;
+    left: 0;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+  }
+}
+
+@media (min-width: 769px) {
+  .sidebar {
+    display: none !important;
+  }
+}
+
+/* Sidebar close icon */
+.sidebar-close-icon {
+  align-self: flex-end;
+  font-size: 22px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
